@@ -5,6 +5,7 @@ using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ConnectManager : MonoBehaviourPunCallbacks
 {
@@ -19,7 +20,7 @@ public class ConnectManager : MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        PhotonNetwork.AutomaticallySyncScene = true; //Syncs master scene to everyone else
+        //Syncs master scene to everyone else
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = gameVersion;
         ShowStatus("Connecting to Photon Servers...");
@@ -85,19 +86,34 @@ public class ConnectManager : MonoBehaviourPunCallbacks
     //When room has been joined
     public override void OnJoinedRoom()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         ShowStatus("Joined room - waiting for another player.");
     }
 
     //Once 2 players in a room, master client changes everyone to the game scene
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         base.OnPlayerEnteredRoom(newPlayer);
         if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && PhotonNetwork.IsMasterClient)
         {
-            string Level = Maps[Random.Range(0, 1)].ToString().Replace("'", "");
+            string scene = Maps[Random.Range(0, 1)].ToString().Replace("'", "");
             //Used instead of SceneManager.LoadScene, Using PhotonsLoadLevel ensures all players load into the new scene. Look at Awake()
-            PhotonNetwork.LoadLevel(Level);
-            
+            PhotonNetwork.LoadLevel(scene);
+            //LoadScene(scene);
+
         }
     }
+
+    //public void LoadScene(string scene)
+    //{
+    //    PV.RPC("RPC_LoadScene", RpcTarget.All, scene);
+    //}
+
+    //[PunRPC]
+    //void RPC_LoadScene(string scene)
+    //{
+    //    SceneManager.LoadScene(scene);
+    //}
+
 }

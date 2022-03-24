@@ -55,6 +55,7 @@ MonoBehaviour:
   - RPC_ExplosionEffect
   - RPC_PunDestroy
   - RPC_PlayerForce
+  - RPC_LoadScene
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

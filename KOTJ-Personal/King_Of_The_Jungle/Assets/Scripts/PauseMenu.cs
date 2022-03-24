@@ -30,25 +30,15 @@ public class PauseMenu : MonoBehaviourPunCallbacks, IOnEventCallback
         PhotonNetwork.NetworkingClient.EventReceived -= OnEvent;
     }
 
-    private void Awake()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
-            {
                 Resume();
-            }
-
             else
-            {
                 Pause();
-            }
         }
 
     }
@@ -65,28 +55,39 @@ public class PauseMenu : MonoBehaviourPunCallbacks, IOnEventCallback
         pauseMenuUI.SetActive(true);
         //Time.timeScale = 0f; - Cant pause time as it's multiplayer
         GameIsPaused = true;
+
+        Debug.Log(PhotonNetwork.AutomaticallySyncScene);
     }
 
     public void LoadMenu()
     {
         //Time.timeScale = 1f;
-        object[] quit = new object[] { PhotonNetwork.NickName, PhotonNetwork.PlayerListOthers[0].ToString() };
-        PhotonNetwork.RaiseEvent(QUIT, quit, raiseEventOptions, SendOptions.SendReliable);
+        SendQuit();
+        Destroy(GameManager.Instance.gameObject);
+        PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("ConnectLobby");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting game...");
-        object[] quit = new object[] { PhotonNetwork.NickName, PhotonNetwork.PlayerListOthers[0].ToString() };
-        PhotonNetwork.RaiseEvent(QUIT, quit, raiseEventOptions, SendOptions.SendReliable);
+        SendQuit();
+        Destroy(GameManager.Instance.gameObject);
+        PhotonNetwork.LeaveRoom();
         Application.Quit();
-
-        
     }
 
     public void OnEvent(EventData photonEvent)
     {
-        
+        return;
     }
+
+    private void SendQuit()
+    {
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
+        {
+            object[] quit = new object[] { PhotonNetwork.NickName, PhotonNetwork.PlayerListOthers[0].ToString() };
+            PhotonNetwork.RaiseEvent(QUIT, quit, raiseEventOptions, SendOptions.SendReliable);
+        }
+    }
+        
 }

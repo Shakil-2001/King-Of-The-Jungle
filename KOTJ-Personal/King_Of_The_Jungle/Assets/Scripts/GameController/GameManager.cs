@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
         Instance = this;
         UpdateGameState(GameState.Wait);
         PhotonNetwork.AutomaticallySyncScene = false;
+        PhotonNetwork.CurrentRoom.IsOpen = false;
         LeaderboardManager = SendLeaderboard.GetComponent<PlayfabLeaderboardManager>();
 
     }
