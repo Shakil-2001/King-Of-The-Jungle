@@ -70,17 +70,17 @@
     <Compile Include="Assets/Scripts/Player/GunRelated/GunMechanics.cs" />
     <Compile Include="Assets/Scripts/Player/IDamageable.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerSelector.cs" />
-    <Compile Include="Assets/Scripts/MainMenu.cs" />
+    <Compile Include="Assets/Scripts/Player/GunRelated/Explosion.cs" />
+    <Compile Include="Assets/Scripts/MenuScripts/MainMenu.cs" />
     <Compile Include="Assets/Scripts/Networking/TestLobbyJoin.cs" />
     <Compile Include="Assets/Scripts/Player/GunRelated/Item.cs" />
     <Compile Include="Assets/Scripts/Networking/PlayfabManager.cs" />
-    <Compile Include="Assets/Scripts/LoginUI_Manager.cs" />
+    <Compile Include="Assets/Scripts/MenuScripts/LoginUI_Manager.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/GameController/GameManager.cs" />
-    <Compile Include="Assets/Scripts/PauseMenu.cs" />
+    <Compile Include="Assets/Scripts/MenuScripts/PauseMenu.cs" />
     <Compile Include="Assets/Scripts/Player/GunRelated/GunInfo.cs" />
     <Compile Include="Assets/Scripts/Networking/NameInputField.cs" />
-    <Compile Include="Assets/Explosion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

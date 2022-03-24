@@ -21,7 +21,6 @@ public class GunMechanics : MonoBehaviourPunCallbacks, IPunObservable
 
     private PlayerController LocalPlayer;
 
-    private float ProjectileSpeed = 1000;
     Vector2 direction;
     int dirMultiplier;
     Vector2 netDir;

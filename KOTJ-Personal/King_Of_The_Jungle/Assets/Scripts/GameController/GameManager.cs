@@ -32,7 +32,9 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     [SerializeField] private Text ExtraMessageText;
 
     [SerializeField] private Canvas TimerOverlay;
-    [SerializeField] private Text TimerText;
+    [SerializeField] private Text TimerCount;
+    [SerializeField] private GameObject MainMenuButton;
+    [SerializeField] private GameObject QuitButton;
     public static event Action<GameState> OnGameStateChanged;
     private string message = "";
     private string winner;
@@ -64,8 +66,9 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
         UpdateGameState(GameState.Wait);
         PhotonNetwork.AutomaticallySyncScene = false;
         PhotonNetwork.CurrentRoom.IsOpen = false;
+        MainMenuButton.SetActive(false);
+        QuitButton.SetActive(false);
         LeaderboardManager = SendLeaderboard.GetComponent<PlayfabLeaderboardManager>();
-
     }
 
     private void Update()
@@ -79,7 +82,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             TimerOverlay.gameObject.SetActive(true);
 
         currentTime -= 1 * Time.deltaTime;
-        TimerText.text = currentTime.ToString("0");
+        TimerCount.text = currentTime.ToString("0");
 
         if (currentTime <= 0)
             activeTimer = false;
@@ -208,6 +211,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     private void Victory()
     {
         ShowMessage(winner + " WINS!");
+        MainMenuButton.SetActive(true);
+        QuitButton.SetActive(true);
     }
 
     public void OnEvent(EventData photonEvent)
@@ -281,8 +286,6 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
         object[] quit = new object[] { PhotonNetwork.NickName, PhotonNetwork.PlayerListOthers[0].ToString() };
         PhotonNetwork.RaiseEvent(QUIT, quit, raiseEventOptions, SendOptions.SendReliable);
         Application.Quit();
-
-
     }
 
 }

@@ -16,8 +16,6 @@ public class PlayfabManager : MonoBehaviour
     public InputField LoginEmailInput;
     public InputField LoginPasswordInput;
 
-    private string localID = "NotSet";
-
     void OnError(PlayFabError error)
     {
         messageText.text = error.ErrorMessage; 

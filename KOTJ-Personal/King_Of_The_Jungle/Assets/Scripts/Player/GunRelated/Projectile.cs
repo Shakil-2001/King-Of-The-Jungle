@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     private PhotonView PV;
     public LayerMask LayerToHit;
 
-    private float force = 2000;
+    //private float force = 2000;
     public GameObject explosion;
 
 
