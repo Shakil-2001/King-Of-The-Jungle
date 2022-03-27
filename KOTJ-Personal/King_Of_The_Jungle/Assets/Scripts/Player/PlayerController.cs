@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
 {
     private const int TURN_CHANGE = 1;
     private const int WINNER = 2;
+    private const int END_ROUND = 4;
 
     RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All }; //Send event to all clients
 
@@ -17,10 +18,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
 
     [SerializeField] Slider slider;
     [SerializeField] Canvas ActiveIcon;
-    [SerializeField] Canvas Crown; 
+    [SerializeField] Canvas Crown;
+
+    public GameObject EndRoundObject;
 
     public bool canMove = false;
     public bool canShoot = false;
+    private bool myRound = false;
     public bool grounded = true;
 
     private bool master;
@@ -74,6 +78,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
     {
         if (!PV.IsMine)
             return;
+            
 
         //Does not work in awake - Getting player number if not already set
         if (playerNum == 0)
@@ -92,6 +97,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
         if (health <= 0)
             Die();
 
+        if (!myRound)
+            EndRoundObject.gameObject.SetActive(false);
+
         if (!canMove)
         {
             canShoot = false; //Just to ensure it is false when player cannot move
@@ -99,7 +107,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
             return;
         }
 
+        
+
+
         ActiveIcon.gameObject.SetActive(true);
+        EndRoundObject.gameObject.SetActive(true);
 
         for (int i = 0; i < 3; i++)
         {
@@ -125,24 +137,34 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
             {
                 canMove = (bool)data[0];
                 canShoot = (bool)data[0];
+                myRound = (bool)data[0];
                 PlayerChange.ChangePlayer(0);
             }
             else if (master && playerNum != 1)
             {
                 canMove = false;
                 canShoot = false;
+                myRound = (bool)data[0];
             }
             else if (playerNum == 1)
             {
                 canMove = (bool)data[1];
                 canShoot = (bool)data[1];
+                myRound = (bool)data[1];
                 PlayerChange.ChangePlayer(0);
             }
             else if (playerNum != 1)
             {
                 canMove = false;
                 canShoot = false;
+                myRound = (bool)data[1];
             }
+        }
+        else if (photonEvent.Code == END_ROUND)
+        {
+            canMove = false;
+            canShoot = false;
+            myRound = false;
         }
     }
 
@@ -177,6 +199,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
             PhotonNetwork.RaiseEvent(WINNER, winner, raiseEventOptions, SendOptions.SendReliable);
         }
         PhotonNetwork.Destroy(gameObject);
+    }
+
+    public void EndRound()
+    {
+        object[] endRound = new object[] { PhotonNetwork.NickName };
+        PhotonNetwork.RaiseEvent(END_ROUND, endRound, raiseEventOptions, SendOptions.SendReliable);
     }
 
 }

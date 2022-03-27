@@ -1,8 +1,9 @@
-﻿<Properties StartupConfiguration="{9E0096D7-246E-F154-0D45-F282C95928F6}|">
+﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController/GameManager.cs">
     <Files>
       <File FileName="Assets/Scripts/Networking/TestLobbyJoin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="108" Column="47" />
+      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="78" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="118" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

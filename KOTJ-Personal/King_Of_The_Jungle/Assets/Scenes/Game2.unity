@@ -19763,7 +19763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 794735787819149485, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 794735787819151184, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
       propertyPath: m_RenderMode
@@ -19854,12 +19854,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 794735789417686250, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 794735789417686250, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 794735789899613691, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 794735789899613691, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 2262837695745078097, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
+      propertyPath: m_Name
+      value: EndRoundButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d72b26e1a377044be800d5083d07ba00, type: 3}

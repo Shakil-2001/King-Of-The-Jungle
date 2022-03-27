@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     private const int TURN_CHANGE = 1;
     private const int WINNER = 2;
     private const int QUIT = 3;
+    private const int END_ROUND = 4;
     object[] NotMasterTurn = new object[] { false, true }; //MasterClient Disabled, Other Enabled
     object[] MasterTurn = new object[] { true, false }; //MasterClient Enabled, Other Disabled
     object[] DisableAll = new object[] { false, false }; //MasterClient Enabled, Other Disabled
@@ -36,10 +37,11 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     [SerializeField] private GameObject MainMenuButton;
     [SerializeField] private GameObject QuitButton;
     public static event Action<GameState> OnGameStateChanged;
+    private string manualEndName = "";
     private string message = "";
     private string winner;
 
-    public enum GameState { Start, Wait, HostTurn, NotHostTurn, Victory, Lose }
+    public enum GameState { Start, Wait, ManualEnd, HostTurn, NotHostTurn, Victory, Lose }
 
     [SerializeField] private Vector3 P1Spawn1;
     [SerializeField] private Vector3 P1Spawn2;
@@ -52,6 +54,9 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     private float timePerMove = 15f;
     private bool activeTimer = false;
     private float currentTime = 0f;
+
+    private string hostName;
+    private string notHostName;
 
     private void Awake()
     {
@@ -140,6 +145,9 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             case GameState.Wait:
                 StartCoroutine(Wait());
                 break;
+            case GameState.ManualEnd:
+                StartCoroutine(ManualEnd());
+                break;
             case GameState.HostTurn:
                 StartCoroutine(HostTurn());
                 break;
@@ -173,6 +181,15 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             nextTurnHost = true;
             UpdateGameState(GameState.NotHostTurn);
         }
+    }
+
+    //Wait between each player move
+    private IEnumerator ManualEnd()
+    {
+        StartCoroutine(ShowMessage(manualEndName + " ended the round.", 2));
+        yield return new WaitForSeconds(2);
+        UpdateGameState(GameState.Wait);
+
     }
 
     private IEnumerator HostTurn()
@@ -243,6 +260,16 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             updateLeaderboard(data[1].ToString());
             message = "Enemy Quit!";
             UpdateGameState(GameState.Victory);
+        }
+        else if (photonEvent.Code == END_ROUND)
+        {
+            StopAllCoroutines();
+            object[] data = (object[])photonEvent.CustomData;
+            //Index 0 - PLayer calling event, Index 1 - Other Player
+            manualEndName = data[0].ToString();
+            currentTime = 0f;
+            UpdateGameState(GameState.ManualEnd);
+
         }
     }
 

@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - MasterPlayer
   - PlayerSelector
+  - EndRound
   layers:
   - Default
   - TransparentFX
