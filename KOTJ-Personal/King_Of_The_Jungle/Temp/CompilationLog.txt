@@ -1,0 +1,38 @@
+# Starting compiling UnityEngine.TestRunner.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-edecf02b7dd6944219b7279f77bb3eeb
+# Starting compiling UnityEngine.UI.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-3b011d0aeb9624a0098023c9f3e170c0
+# Starting compiling PhotonChat.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-9b180dd541fd24da5999949690bb4fd5
+# Starting compiling Unity.InternalAPIEngineBridge.001.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-ccb36be9e39054236840810b97a355c3
+# Starting compiling Unity.2D.PixelPerfect.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-bdb1b314f640d494786da1baddbf0a59
+# Starting compiling Unity.Timeline.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-0b34e1c0cf85041be91fd2272facfe09
+# Starting compiling PlayFab.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-80c256e7707924c5cad3df5a00b5bf43
+# Starting compiling Unity.TextMeshPro.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-74fa584eb4b7d49dbbf5d6f12ac0cb1f
+# Starting compiling PhotonRealtime.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-bac5e6ca7e46d436a8c84768bf7d7b48
+# Starting compiling Unity.Mathematics.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-c153505483d9d4f04a7a2c1dc1dea95d
+# Starting compiling PhotonUnityNetworking.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-78b622212a6f849299778659241fa191
+# Starting compiling Unity.2D.IK.Runtime.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-9d348caf894bd4d269092f466f0f5dd3
+# Starting compiling Unity.2D.Animation.Triangle.Runtime.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-ddc28971159fa4c379ef5d5f8a625013
+# Starting compiling Unity.2D.Common.Runtime.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-c014c431f39394c328620979780fc6fb
+# Starting compiling PhotonUnityNetworking.Utilities.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-94aeb1b6a1c574e73b8f71cf57ca6633
+# Starting compiling Unity.2D.Animation.Runtime.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-47c54927cc3bc4accbffda9b23f41253
+# Starting compiling Unity.2D.SpriteShape.Runtime.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-ebde07b63dd664e228e371c24638da84
+# Starting compiling PhotonUnityNetworking.Demos.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-51bef60d71297447ea868f117b8b80bd
+# Starting compiling Assembly-CSharp.dll
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-763d11d1672fb46018c49d6f12aa5fe3

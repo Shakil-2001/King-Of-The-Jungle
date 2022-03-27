@@ -1,14 +1,14 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{9E0096D7-246E-F154-0D45-F282C95928F6}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController/GameManager.cs">
     <Files>
       <File FileName="Assets/Scripts/Networking/TestLobbyJoin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="78" Column="1" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="118" Column="54" />
+      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="38" Column="56" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="16fffc83-b60b-48ac-9292-8339044fbec6" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6a6d6634-10b9-486c-b689-88b06ab512a0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: ExtraMessageText
       value: 
       objectReference: {fileID: 438359147}
+    - target: {fileID: 2331391067252129842, guid: 33597a4d86b364b4d98abec7a7f0b2df, type: 3}
+      propertyPath: CurrentlyPlayingText
+      value: 
+      objectReference: {fileID: 1613178575}
     - target: {fileID: 2331391067252129843, guid: 33597a4d86b364b4d98abec7a7f0b2df, type: 3}
       propertyPath: sceneViewId
       value: 1
@@ -19891,6 +19895,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 794735787819151184, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
   m_PrefabInstance: {fileID: 1613178572}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613178575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6851919855516671128, guid: d72b26e1a377044be800d5083d07ba00, type: 3}
+  m_PrefabInstance: {fileID: 1613178572}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1743539228
 PrefabInstance:
   m_ObjectHideFlags: 0

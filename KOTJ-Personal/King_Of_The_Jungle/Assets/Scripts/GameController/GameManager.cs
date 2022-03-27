@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
     [SerializeField] private Canvas TimerOverlay;
     [SerializeField] private Text TimerCount;
+    [SerializeField] private Text CurrentlyPlayingText;
     [SerializeField] private GameObject MainMenuButton;
     [SerializeField] private GameObject QuitButton;
     public static event Action<GameState> OnGameStateChanged;
@@ -74,6 +75,9 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
         MainMenuButton.SetActive(false);
         QuitButton.SetActive(false);
         LeaderboardManager = SendLeaderboard.GetComponent<PlayfabLeaderboardManager>();
+
+        hostName = PhotonNetwork.PlayerList[0].ToString().Remove(0, 4).Replace("'", "");
+        notHostName = PhotonNetwork.PlayerList[1].ToString().Remove(0, 4).Replace("'", "");
     }
 
     private void Update()
@@ -150,9 +154,11 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
                 break;
             case GameState.HostTurn:
                 StartCoroutine(HostTurn());
+                CurrentlyPlayingText.text = hostName;
                 break;
             case GameState.NotHostTurn:
-                StartCoroutine(NotHostTurn()); 
+                StartCoroutine(NotHostTurn());
+                CurrentlyPlayingText.text = notHostName;
                 break;
             case GameState.Victory:
                 Victory();
@@ -195,7 +201,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     private IEnumerator HostTurn()
     {
         //Another wait method called - if not called, player can move while overlay is showing
-        StartCoroutine(ShowMessage("Host Turn", 2));
+        StartCoroutine(ShowMessage(hostName + " Turn", 2));
         yield return new WaitForSeconds(2);
 
         //Raise Event - Event sent to all listeners
@@ -211,7 +217,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
     private IEnumerator NotHostTurn()
     {
-        StartCoroutine(ShowMessage("Not Host Turn", 2));
+        StartCoroutine(ShowMessage(notHostName + " Turn", 2));
         yield return new WaitForSeconds(2);
 
         //Raise event - Event sent to all listeners
