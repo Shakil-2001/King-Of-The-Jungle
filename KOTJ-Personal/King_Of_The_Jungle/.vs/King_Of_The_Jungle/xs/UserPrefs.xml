@@ -1,19 +1,13 @@
 ﻿<Properties StartupConfiguration="{9E0096D7-246E-F154-0D45-F282C95928F6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuScripts/PauseMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player/PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/GunRelated/GunMechanics.cs" Line="26" Column="20" />
-      <File FileName="Assets/Scripts/Networking/ConnectManager.cs" Line="104" Column="1" />
-      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="47" Column="47" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MenuScripts/PauseMenu.cs" Line="91" Column="28" />
-      <File FileName="Assets/Scripts/Networking/PlayfabManager.cs" Line="19" Column="19" />
-      <File FileName="Assets/Scripts/Player/GunRelated/Projectile.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/Networking/TestLobbyJoin.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="108" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7b03a4fb-7bab-450b-b982-de7b5c28c902" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="16fffc83-b60b-48ac-9292-8339044fbec6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

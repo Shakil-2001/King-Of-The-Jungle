@@ -110,23 +110,23 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            InstantiatePlayer("MasterPlayer1", P1Spawn1);
-            InstantiatePlayer("MasterPlayer2", P1Spawn2);
-            InstantiatePlayer("MasterPlayer3", P1Spawn3);
+            InstantiatePlayer("MasterPlayer1", P1Spawn1, "RhinoPlayer");
+            InstantiatePlayer("MasterPlayer2", P1Spawn2 , "RhinoPlayer");
+            InstantiatePlayer("MasterPlayer3", P1Spawn3, "RhinoPlayer");
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerSelector"), new Vector3(0, 0, 0), Quaternion.identity, 0);
         }// scene.buildIndex == 3 && 
         else if (!PhotonNetwork.IsMasterClient)
         {
-            InstantiatePlayer("Player1", P2Spawn1);
-            InstantiatePlayer("Player2", P2Spawn2);
-            InstantiatePlayer("Player3", P2Spawn3);
+            InstantiatePlayer("Player1", P2Spawn1, "Player");
+            InstantiatePlayer("Player2", P2Spawn2, "Player");
+            InstantiatePlayer("Player3", P2Spawn3, "Player");
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerSelector"), new Vector3(0, 0, 0), Quaternion.identity, 0);
         }
     }
 
-    private void InstantiatePlayer(string playerName, Vector3 spawn)
+    private void InstantiatePlayer(string playerName, Vector3 spawn, string playerType)
     {
-        GameObject player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), spawn, Quaternion.identity);
+        GameObject player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", playerType), spawn, Quaternion.identity);
         player.name = playerName;
     }
 
