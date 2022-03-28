@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoginUI_Manager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LoginUI_Manager : MonoBehaviour
     //Screen object variables
     public GameObject loginUI;
     public GameObject registerUI;
+    public Text msgText;
 
     private void Awake()
     {
@@ -25,12 +27,14 @@ public class LoginUI_Manager : MonoBehaviour
     {
         loginUI.SetActive(true);
         registerUI.SetActive(false);
+        msgText.text = "";
     }
 
     public void RegisterScreen()
     {
         loginUI.SetActive(false);
         registerUI.SetActive(true);
+        msgText.text = "";
     }
 }
 

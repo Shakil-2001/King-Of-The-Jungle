@@ -943,6 +943,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndRoundButton
       objectReference: {fileID: 0}
+    - target: {fileID: 2365782256294469296, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365782256294469296, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365782256294469296, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469297, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1041,7 +1053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -379
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

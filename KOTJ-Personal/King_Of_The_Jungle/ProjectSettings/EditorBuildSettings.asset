@@ -7,17 +7,23 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: c7a28f4969fe0db47846cc1ec534cbbf
+    guid: 9ab2e95cc9de549a8ad41afb13803276
   - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 1f2df7378b4814a0c997492b50fcbe29
   - enabled: 1
     path: Assets/Scenes/ConnectLobby.unity
-    guid: e03610a5f13524274901f66ce43f05aa
+    guid: 6dfa25902868b4873bca9cc957246cb1
   - enabled: 1
     path: Assets/Scenes/Game1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Game2.unity
     guid: 3640388ff290f4ff69600605640f52a9
+  - enabled: 0
+    path: Assets/Scenes/OldConnect.unity
+    guid: e03610a5f13524274901f66ce43f05aa
+  - enabled: 0
+    path: Assets/Scenes/OldMainMenu.unity
+    guid: c7a28f4969fe0db47846cc1ec534cbbf
   m_configObjects: {}
