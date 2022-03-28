@@ -452,11 +452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 211.6323
+      value: 172.2142
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 66.93
+      value: 54.4638
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,11 +488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 144
+      value: 163.70898
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -199
+      value: -205.2331
       objectReference: {fileID: 0}
     - target: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -690,8 +690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.4423, y: 47.291504}
-  m_SizeDelta: {x: 508.8819, y: 339.28}
+  m_AnchoredPosition: {x: 4.4423, y: -0.4681}
+  m_SizeDelta: {x: 508.8819, y: 434.7993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872645639
 MonoBehaviour:
@@ -715,7 +715,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d08fb1c6d73524104b0be3df5e2312b7, type: 3}
-    m_FontSize: 30
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -726,7 +726,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: About game story here.....
+  m_Text: "THE STORY BEGINS WHEN...\r\nIt\u2019s the year 500BC and all creatures
+    on planet Earth face extinction. Thousands of animal\u2019s board Noah\u2019s
+    Ark seeking refuge from their imminent doom. Months later, as the flood begins
+    to subside, the Ark crashes into a remote island. EXPLOSION!\r\n\r\nThe animals
+    wander out of the Ark to find themselves on a tropical island covered in ancient
+    artifacts. These ancient artifacts increase the intelligence of these animals,
+    and a new, advanced species of animals are born. Within the next 100 years, these
+    animals create an advanced civilisation, hosting sophisticated architecture and
+    revolutionary weaponry.\r\n\r\nNow the animals seek to elect a new king, but
+    each faction wishes for the king to be one of their own. Countless disputes later,
+    chaos breaks out. Soon after a war is declared\u2026 a war for the next KING
+    OF THE JUNGLE."
 --- !u!222 &872645640
 CanvasRenderer:
   m_ObjectHideFlags: 0
