@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     [SerializeField] private GameObject SendLeaderboard;
     private PlayfabLeaderboardManager LeaderboardManager;
 
-    [SerializeField] private Canvas Overlay; 
+    [SerializeField] private Canvas Overlay;
+    [SerializeField] private Text VsText;
     [SerializeField] private Text MessageText;
     [SerializeField] private Text ExtraMessageText;
 
@@ -82,6 +83,12 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
     private void Update()
     {
+        if (PhotonNetwork.CountOfPlayers != 2)
+        {
+            winner = PhotonNetwork.PlayerList[0].ToString().Remove(0, 4).Replace("'", "");
+            UpdateGameState(GameState.Victory);
+        }
+
         if (!activeTimer)
         {
             TimerOverlay.gameObject.SetActive(false);
@@ -233,7 +240,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
     private void Victory()
     {
-        ShowMessage(winner + " WINS!");
+        ShowMessage(winner + " is the King of the Jungle!");
         MainMenuButton.SetActive(true);
         QuitButton.SetActive(true);
     }
@@ -290,6 +297,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     //Show pop up message in game - text = msg shown, time = length of msg popup
     private IEnumerator ShowMessage(String text ,int time)
     {
+        if (notHostName != "" || hostName != "")
+            VsText.text = hostName + " Vs. " + notHostName;
         MessageText.text = text;
         ExtraMessageText.text = message;
         Overlay.gameObject.SetActive(true);

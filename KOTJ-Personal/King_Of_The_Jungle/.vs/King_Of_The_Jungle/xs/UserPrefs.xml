@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{9E0096D7-246E-F154-0D45-F282C95928F6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuScripts/MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController/GameManager.cs">
     <Files>
       <File FileName="../../../../final-KOTJ/King-Of-The-Jungle/KOTJ-Personal/King_Of_The_Jungle/Assets/Scripts/MenuScripts/LoginUI_Manager.cs" Line="48" Column="1" />
-      <File FileName="Assets/Scripts/GameController/GameManager.cs" />
+      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="35" Column="1" />
       <File FileName="Assets/Scripts/Player/PlayerController.cs" />
       <File FileName="Assets/Scripts/MenuScripts/LoginUI_Manager.cs" />
       <File FileName="Assets/Scripts/Networking/ConnectManager.cs" />
       <File FileName="Assets/Scripts/Networking/PlayfabManager.cs" />
-      <File FileName="Assets/Scripts/MenuScripts/MainMenu.cs" Line="25" Column="2" />
-      <File FileName="Assets/Scripts/MenuScripts/QuitScript.cs" />
+      <File FileName="Assets/Scripts/MenuScripts/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MenuScripts/QuitScript.cs" Line="9" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bc537bf4-ed13-46e7-b8fc-8cc803def347" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dfe570a3-f317-498c-9ebb-dcb20a59e87f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
