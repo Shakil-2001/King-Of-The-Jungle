@@ -2454,25 +2454,167 @@ PrefabInstance:
       propertyPath: m_Name
       value: HowToPlay
       objectReference: {fileID: 0}
+    - target: {fileID: 7859830848823545709, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+        Objective'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830848925474677, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: 'Damage: 25, Range: moderate, Special: Player can move and switch player
+        after shooting
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849015108382, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: "\n\n- Shoot with your pistol in early rounds, don\u2019t risk losing
+        your characters!\r\n\n- Shoot with the pistol, and follow up with a more
+        powerful weapon with another character, to maximise damage!\r\n\n- Keep your
+        king protected and use him as a sniper, do long distance damage and keep
+        him safe!\r\n\n- Keep your king out of the line of sight of sniper fire,
+        will make it very easy to pick him off safely!\r\n\n- Keep high ground -
+        Its much safer and gives you better lines of sight\r\n\n- Don\u2019t group
+        your players together, a single rocket launcher round could do a lot of damage!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849114854080, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+        Gameplay'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849120879077, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+        Weapons'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849198796663, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: "\n\nDo whatever is necessary to kill the enemy king.\r\n\r\nKilling
+        the enemy king means your king will be named \u2018King Of The Jungle\u2019!\r\n\r\nUse
+        any of your three playable characters to bring the king to 0 health to win
+        the game."
+      objectReference: {fileID: 0}
     - target: {fileID: 7859830849424756280, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849540231026, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: 'Damage: 70, Range: Short,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849585659667, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849756593767, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+        Controls'
       objectReference: {fileID: 0}
     - target: {fileID: 7859830849766654293, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 96
       objectReference: {fileID: 0}
+    - target: {fileID: 7859830849908035878, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: 'Damage: 70, Range: Short,'
+      objectReference: {fileID: 0}
     - target: {fileID: 7859830849982311919, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830849996617549, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+        Tips'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830850015643729, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: 'Damage: 1-50, Range: moderate, Special: Splash damage, damage scales
+        depending on distance from hit'
       objectReference: {fileID: 0}
     - target: {fileID: 7859830850249503786, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -29
       objectReference: {fileID: 0}
+    - target: {fileID: 7859830850372926772, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+
+        A,D - Left, Right
+
+        
+
+        SpaceBar - Jump
+
+        
+
+        Q,E
+        - Toggle Previous/Next Weapon
+
+        
+
+        1,2,3 - Choose active
+        player
+
+        
+
+        Left Mouse Click - Shoot
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7859830850751387531, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830850780180249, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_Text
+      value: '
+
+
+        Each player can control 3 different characters, 2 minions
+        and a king.
+
+        
+
+        The active player is indicated by the red
+        indicator above their head.
+
+        
+
+        If your weapon bar is visible,
+        it is your turn and you will be able to move and shoot. The current players
+        turn is also displayed in the top name bar in the UI.
+
+        
+
+        You
+        will have 45 seconds to move their players to shoot or retreat each round.
+
+        
+
+        You
+        can run, jump, switch weapons, switch characters and shoot in order to achieve
+        this objective.
+
+        
+
+        If you chooses to end their round early,
+        click the end round button.
+
+        
+
+        After shooting you will
+        no longer be able to move, unless you shoot with the pistol which will allow
+        you to continue to move and switch characters.
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
