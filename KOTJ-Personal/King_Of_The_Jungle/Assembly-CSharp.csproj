@@ -81,6 +81,7 @@
     <Compile Include="Assets/Scripts/MenuScripts/PauseMenu.cs" />
     <Compile Include="Assets/Scripts/Player/GunRelated/GunInfo.cs" />
     <Compile Include="Assets/Scripts/Networking/NameInputField.cs" />
+    <Compile Include="Assets/Scripts/MenuScripts/QuitScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

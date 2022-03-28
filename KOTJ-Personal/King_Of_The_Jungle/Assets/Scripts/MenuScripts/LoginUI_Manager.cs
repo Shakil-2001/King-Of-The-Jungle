@@ -36,5 +36,10 @@ public class LoginUI_Manager : MonoBehaviour
         registerUI.SetActive(true);
         msgText.text = "";
     }
+
+    public void LoadMainMenu()
+    {
+        
+    }
 }
 

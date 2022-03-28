@@ -111,16 +111,4 @@ public class ConnectManager : MonoBehaviourPunCallbacks
 
         }
     }
-
-    //public void LoadScene(string scene)
-    //{
-    //    PV.RPC("RPC_LoadScene", RpcTarget.All, scene);
-    //}
-
-    //[PunRPC]
-    //void RPC_LoadScene(string scene)
-    //{
-    //    SceneManager.LoadScene(scene);
-    //}
-
 }

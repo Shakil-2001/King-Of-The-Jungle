@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{9E0096D7-246E-F154-0D45-F282C95928F6}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MenuScripts/MainMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameController/GameManager.cs" Line="38" Column="56" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="73" Column="35" />
-      <File FileName="Assets/Scripts/MenuScripts/LoginUI_Manager.cs" Line="40" Column="1" />
-      <File FileName="Assets/Scripts/Networking/ConnectManager.cs" Line="22" Column="6" />
-      <File FileName="Assets/Scripts/Networking/PlayfabManager.cs" Line="101" Column="1" />
-      <File FileName="Assets/Scripts/MenuScripts/MainMenu.cs" Line="31" Column="28" />
+      <File FileName="../../../../final-KOTJ/King-Of-The-Jungle/KOTJ-Personal/King_Of_The_Jungle/Assets/Scripts/MenuScripts/LoginUI_Manager.cs" Line="48" Column="1" />
+      <File FileName="Assets/Scripts/GameController/GameManager.cs" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" />
+      <File FileName="Assets/Scripts/MenuScripts/LoginUI_Manager.cs" />
+      <File FileName="Assets/Scripts/Networking/ConnectManager.cs" />
+      <File FileName="Assets/Scripts/Networking/PlayfabManager.cs" />
+      <File FileName="Assets/Scripts/MenuScripts/MainMenu.cs" Line="25" Column="2" />
+      <File FileName="Assets/Scripts/MenuScripts/QuitScript.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
