@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98006a67f6eb7e6419102d3abca90472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 6c6f9e9961b60e84889748db9b3d9f17, type: 2}
 --- !u!1001 &526866763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1211,6 +1210,7 @@ GameObject:
   - component: {fileID: 1709269750}
   - component: {fileID: 1709269749}
   - component: {fileID: 1709269748}
+  - component: {fileID: 1709269751}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1283,6 +1283,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1709269751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709269747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98006a67f6eb7e6419102d3abca90472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1736167920 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2365782256294469299, guid: de9b0285edf724f3ebac5029f83e9110, type: 3}

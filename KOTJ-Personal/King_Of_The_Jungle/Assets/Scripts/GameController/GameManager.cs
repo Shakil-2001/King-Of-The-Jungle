@@ -262,8 +262,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             StopAllCoroutines();
             object[] data = (object[])photonEvent.CustomData;
             //Index 0 - PLayer calling event, Index 1 - Other Player
-            winner = data[1].ToString();
-            updateLeaderboard(data[1].ToString());
+            winner = data[1].ToString().Remove(0, 4).Replace("'", "");
+            updateLeaderboard(data[1].ToString().Remove(0, 4).Replace("'", ""));
             message = "Enemy Quit!";
             UpdateGameState(GameState.Victory);
         }

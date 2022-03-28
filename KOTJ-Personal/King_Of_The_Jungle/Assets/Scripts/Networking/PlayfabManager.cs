@@ -49,7 +49,9 @@ public class PlayfabManager : MonoBehaviour
         var nameRequest = new UpdateUserTitleDisplayNameRequest
         {
             DisplayName = RegisterUsernameInput.text
-        };
+            
+    };
+        PlayerPrefs.SetString("PlayerName", RegisterUsernameInput.text);
         PlayFabClientAPI.UpdateUserTitleDisplayName(nameRequest, OnDisplaNameUpdate, OnError); PlayFabClientAPI.UpdateUserTitleDisplayName(nameRequest, OnDisplaNameUpdate, OnError);
         GetPlayerProfile(result.PlayFabId);
         PlayerPrefs.SetString("PlayFabID", result.PlayFabId);
@@ -78,8 +80,8 @@ public class PlayfabManager : MonoBehaviour
 
     void OnLoginSuccess(LoginResult result)
     {
-        PlayerPrefs.SetString("PlayFabID", result.PlayFabId);
         GetPlayerProfile(result.PlayFabId);
+        PlayerPrefs.SetString("PlayFabID", result.PlayFabId);
         Debug.Log("Successful login");
         StartGame();
     }

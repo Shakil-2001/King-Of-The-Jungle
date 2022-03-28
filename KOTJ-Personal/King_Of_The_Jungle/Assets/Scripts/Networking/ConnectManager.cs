@@ -26,6 +26,13 @@ public class ConnectManager : MonoBehaviourPunCallbacks
         ShowStatus("Connecting to Photon Servers...");
     }
 
+    private void Update()
+    {
+        WelcomeMessage.text = "Welcome " + PlayerPrefs.GetString("PlayerName");
+
+        if (PhotonNetwork.NickName == "")
+            PhotonNetwork.NickName = PlayerPrefs.GetString("PlayerName");
+    }
 
     //Called when Connect Button is clicked
     public void StartGame()

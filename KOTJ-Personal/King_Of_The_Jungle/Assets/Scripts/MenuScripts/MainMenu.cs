@@ -6,7 +6,10 @@ using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    private void Awake()
+    {
+        PlayerPrefs.SetString("PlayerName", "");
+    }
 
     // Start is called before the first frame update
     public void PlayGame()
@@ -14,17 +17,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void SetVolume (float volume)
-    {
-        audioMixer.SetFloat("volume", volume);
-    }
-
-    public void SetQuality (int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
-
-    // Update is called once per frame
     public void QuitGame()
     {
         Debug.Log("QUIT!");
