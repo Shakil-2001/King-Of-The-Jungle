@@ -68,6 +68,7 @@ public class ChatManager : MonoBehaviour, IChatClientListener
     {
         if (privateReceiver == "")
         {
+            currentChat = username + ": " + currentChat;
             chatClient.PublishMessage("RegionChannel", currentChat);
             chatField.text = "";
             currentChat = "";
@@ -122,6 +123,7 @@ public class ChatManager : MonoBehaviour, IChatClientListener
     {
         Debug.Log("Connected");
         joinChatButton.SetActive(false);
+        username = PhotonNetwork.NickName;
         chatClient.Subscribe(new string[] { "RegionChannel" });
     }
 

@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     [SerializeField] private Vector3 P2Spawn3;
 
     private bool nextTurnHost = true;
-    private float timePerMove = 15f;
+    private float timePerMove = 60f;
     private bool activeTimer = false;
     private float currentTime = 0f;
 
@@ -83,12 +83,6 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
     private void Update()
     {
-        if (PhotonNetwork.CountOfPlayers != 2)
-        {
-            winner = PhotonNetwork.PlayerList[0].ToString().Remove(0, 4).Replace("'", "");
-            UpdateGameState(GameState.Victory);
-        }
-
         if (!activeTimer)
         {
             TimerOverlay.gameObject.SetActive(false);
@@ -127,7 +121,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
         if (PhotonNetwork.IsMasterClient)
         {
             InstantiatePlayer("MasterPlayer1", P1Spawn1, "RhinoPlayer");
-            InstantiatePlayer("MasterPlayer2", P1Spawn2 , "RhinoPlayer");
+            InstantiatePlayer("MasterPlayer2", P1Spawn2, "RhinoPlayer");
             InstantiatePlayer("MasterPlayer3", P1Spawn3, "RhinoPlayer");
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerSelector"), new Vector3(0, 0, 0), Quaternion.identity, 0);
         }// scene.buildIndex == 3 && 
@@ -149,7 +143,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     //Function to change GameStates
     public void UpdateGameState(GameState newState)
     {
-        State = newState;  
+        State = newState;
 
         switch (newState)
         {
@@ -172,22 +166,22 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
                 break;
 
             default:
-                throw new ArgumentOutOfRangeException(nameof(newState), newState, null); 
+                throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
         OnGameStateChanged?.Invoke(newState);
     }
 
-    
+
     //Wait between each player move
     private IEnumerator Wait()
     {
         StartCoroutine(ShowMessage("Get Ready To Fight", 2));
         yield return new WaitForSeconds(2);
 
-        if(nextTurnHost)
+        if (nextTurnHost)
         {
             nextTurnHost = false;
-            UpdateGameState(GameState.HostTurn);  
+            UpdateGameState(GameState.HostTurn);
         }
         else
         {
@@ -253,7 +247,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             StopAllCoroutines();
             object[] data = (object[])photonEvent.CustomData;
             //Index 0 - PLayer calling event, Index 1 - Other Player
-            winner = data[1].ToString().Remove(0,4).Replace("'", "");
+            winner = data[1].ToString().Remove(0, 4).Replace("'", "");
             message = data[0].ToString() + " King has been killed!";
             Debug.Log("Winner = " + winner);
             Debug.Log("PhotonNetwork.Nickname = " + PhotonNetwork.NickName);
@@ -269,8 +263,18 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
             StopAllCoroutines();
             object[] data = (object[])photonEvent.CustomData;
             //Index 0 - PLayer calling event, Index 1 - Other Player
-            winner = data[1].ToString().Remove(0, 4).Replace("'", "");
-            updateLeaderboard(data[1].ToString().Remove(0, 4).Replace("'", ""));
+            string quitter = data[0].ToString().Replace("'", "");
+
+            if (quitter == hostName)
+            {
+                winner = notHostName;
+                updateLeaderboard(notHostName);
+            } else if (quitter == notHostName)
+            {
+                winner = hostName;
+                updateLeaderboard(hostName);
+            }
+
             message = "Enemy Quit!";
             UpdateGameState(GameState.Victory);
         }
@@ -295,7 +299,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     }
 
     //Show pop up message in game - text = msg shown, time = length of msg popup
-    private IEnumerator ShowMessage(String text ,int time)
+    private IEnumerator ShowMessage(String text, int time)
     {
         if (notHostName != "" || hostName != "")
             VsText.text = hostName + " Vs. " + notHostName;
@@ -317,16 +321,19 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     public void LoadMenu()
     {
         //Time.timeScale = 1f;
-        object[] quit = new object[] { PhotonNetwork.NickName, PhotonNetwork.PlayerListOthers[0].ToString() };
+        object[] quit = new object[] { PhotonNetwork.NickName};
         PhotonNetwork.RaiseEvent(QUIT, quit, raiseEventOptions, SendOptions.SendReliable);
+        PhotonNetwork.Disconnect();
+        Destroy(Instance.gameObject);
         SceneManager.LoadScene("ConnectLobby");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
-        object[] quit = new object[] { PhotonNetwork.NickName, PhotonNetwork.PlayerListOthers[0].ToString() };
+        object[] quit = new object[] { PhotonNetwork.NickName};
         PhotonNetwork.RaiseEvent(QUIT, quit, raiseEventOptions, SendOptions.SendReliable);
+        PhotonNetwork.Disconnect();
         Application.Quit();
     }
 
