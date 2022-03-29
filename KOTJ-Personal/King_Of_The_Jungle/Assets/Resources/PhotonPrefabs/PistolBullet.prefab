@@ -188,6 +188,8 @@ MonoBehaviour:
   damage: 25
   lifeTimeSeconds: 1
   splashRange: 0
+  soundExplosion: {fileID: 0}
   LayerToHit:
     serializedVersion: 2
     m_Bits: 128
+  explosion: {fileID: 0}

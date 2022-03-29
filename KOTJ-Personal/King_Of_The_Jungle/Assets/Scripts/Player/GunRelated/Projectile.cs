@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     public float damage; //Damage passed from Weapon Class
     public float lifeTimeSeconds;
     public float splashRange;
+    public AudioSource soundExplosion;
     private PhotonView PV;
     public LayerMask LayerToHit;
 
@@ -73,6 +74,7 @@ public class Projectile : MonoBehaviour
     void RPC_ExplosionEffect()
     {
         GameObject ExplosionEffect = Instantiate(explosion, transform.position, Quaternion.identity);
+        soundExplosion.Play(0);
         Destroy(ExplosionEffect, 0.35f);
     }
 

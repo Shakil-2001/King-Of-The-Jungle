@@ -15,6 +15,8 @@ public class GunMechanics : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] Item[] items;
     [SerializeField] Canvas Hotbar; 
     [SerializeField] GameObject[] HotbarItems;
+    public AudioSource firingSound;
+    public AudioSource changeWeapon;
 
     private int itemIndex = 0;
     private int previousItemIndex = -1;
@@ -92,6 +94,7 @@ public class GunMechanics : MonoBehaviourPunCallbacks, IPunObservable
         if (Input.GetMouseButtonDown(0) && LocalPlayer.canShoot && itemIndex != 0)
         {
             items[itemIndex].Use(dirMultiplier);
+            firingSound.Play(0);
             LocalPlayer.canShoot = false;
             if (itemIndex != 1) //If the weapon isn't a pistol
             {
@@ -139,6 +142,7 @@ public class GunMechanics : MonoBehaviourPunCallbacks, IPunObservable
         itemIndex = _index;
 
         ShowItem(itemIndex, true);
+        changeWeapon.Play(0);
         HotbarItems[itemIndex].gameObject.SetActive(true);
 
 

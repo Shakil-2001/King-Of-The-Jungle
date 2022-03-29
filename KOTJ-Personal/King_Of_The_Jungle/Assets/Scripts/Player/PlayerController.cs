@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
     [SerializeField] Canvas Crown;
 
     public GameObject EndRoundObject;
+    public AudioSource playerHurtSound;
 
     public bool canMove = false;
     public bool canShoot = false;
@@ -178,6 +179,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IOnEventCallback, IDa
     {
         health -= damage;
         slider.value = 1 - (health / maxHealth);
+        playerHurtSound.Play();
     }
 
     public void WearCrown(bool wear)

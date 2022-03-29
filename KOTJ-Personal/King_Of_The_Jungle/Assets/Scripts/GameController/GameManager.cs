@@ -57,6 +57,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     private bool activeTimer = false;
     private float currentTime = 0f;
 
+    public AudioSource winSound;
+
     private string hostName;
     private string notHostName;
 
@@ -236,6 +238,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
     {
         ShowMessage(winner + " is the King of the Jungle!");
         MainMenuButton.SetActive(true);
+        winSound.Play();
         QuitButton.SetActive(true);
     }
 
