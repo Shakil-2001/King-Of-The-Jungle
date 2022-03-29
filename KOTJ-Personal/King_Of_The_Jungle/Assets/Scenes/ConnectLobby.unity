@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2cce751f02b0f403baf5670ee70e7062, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92945f14b6d1e4004a1f5e6ba218e32e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2549,23 +2549,23 @@ PrefabInstance:
 
         A,D - Left, Right
 
-        
+
 
         SpaceBar - Jump
 
-        
+
 
         Q,E
         - Toggle Previous/Next Weapon
 
-        
 
-        1,2,3 - Choose active
-        player
 
-        
+        1,2,3 - Choose active player
 
-        Left Mouse Click - Shoot
+
+
+        Left
+        Mouse Click - Shoot
 
 '
       objectReference: {fileID: 0}
@@ -2581,38 +2581,38 @@ PrefabInstance:
         Each player can control 3 different characters, 2 minions
         and a king.
 
-        
 
-        The active player is indicated by the red
-        indicator above their head.
 
-        
+        The active player is indicated by the red indicator
+        above their head.
 
-        If your weapon bar is visible,
-        it is your turn and you will be able to move and shoot. The current players
-        turn is also displayed in the top name bar in the UI.
 
-        
 
-        You
-        will have 45 seconds to move their players to shoot or retreat each round.
+        If your weapon bar is visible, it is your turn
+        and you will be able to move and shoot. The current players turn is also
+        displayed in the top name bar in the UI.
 
-        
 
-        You
-        can run, jump, switch weapons, switch characters and shoot in order to achieve
+
+        You will have 45 seconds
+        to move their players to shoot or retreat each round.
+
+
+
+        You can
+        run, jump, switch weapons, switch characters and shoot in order to achieve
         this objective.
 
-        
 
-        If you chooses to end their round early,
-        click the end round button.
 
-        
+        If you chooses to end their round early, click
+        the end round button.
 
-        After shooting you will
-        no longer be able to move, unless you shoot with the pistol which will allow
-        you to continue to move and switch characters.
+
+
+        After shooting you will no longer be able
+        to move, unless you shoot with the pistol which will allow you to continue
+        to move and switch characters.
 
 '
       objectReference: {fileID: 0}
