@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Game4.unity
+=======
+- path: Assets/Scenes/Game1 copy.unity
+>>>>>>> e2401f05ff18cd890712ad5b56c1daa35633143f
   isLoaded: 1
   isActive: 1
   isSubScene: 0
