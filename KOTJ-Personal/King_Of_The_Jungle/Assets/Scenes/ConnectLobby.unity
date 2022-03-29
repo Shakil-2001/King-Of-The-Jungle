@@ -2454,6 +2454,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HowToPlay
       objectReference: {fileID: 0}
+    - target: {fileID: 7859830848650180163, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830848748094474, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7859830848823545709, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_Text
       value: '
@@ -2521,7 +2529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7859830849908035878, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_Text
-      value: 'Damage: 70, Range: Short,'
+      value: 'Damage: 50, Range: Long,'
       objectReference: {fileID: 0}
     - target: {fileID: 7859830849982311919, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2537,6 +2545,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Damage: 1-50, Range: moderate, Special: Splash damage, damage scales
         depending on distance from hit'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830850139739833, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7859830850249503786, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2568,6 +2580,14 @@ PrefabInstance:
         Mouse Click - Shoot
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830850398679033, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859830850734280536, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7859830850751387531, guid: e0fbc2aea24a04187be0d627f2b15626, type: 3}
       propertyPath: m_AnchoredPosition.y
